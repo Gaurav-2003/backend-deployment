@@ -25,7 +25,9 @@ public class SentimentAnalysisService {
         // Initialize Stanford NLP (optional - can be heavy)
         try {
             Properties props = new Properties();
-            props.setProperty("annotators", "tokenize,ssplit,pos,parse,sentiment");
+//            props.setProperty("annotators", "tokenize,ssplit,pos,parse,sentiment");
+//            props.setProperty("ssplit.eolonly", "true");
+            props.setProperty("annotators", "tokenize,ssplit,pos");
             props.setProperty("ssplit.eolonly", "true");
             pipeline = new StanfordCoreNLP(props);
             log.info("Stanford CoreNLP initialized successfully");
