@@ -484,7 +484,7 @@ const ChatWindow = ({ selectedUser, onBack }) => {
               <Box>
                 <Box
                   component="img"
-                  src={`http://localhost:8080${message.fileUrl}`}
+                  src={`https://backend-deployment-1-ke5h.onrender.com${message.fileUrl}`}
                   alt={message.fileName}
                   sx={{
                     maxWidth: '100%',
@@ -493,7 +493,7 @@ const ChatWindow = ({ selectedUser, onBack }) => {
                     cursor: 'pointer',
                     display: 'block'
                   }}
-                  onClick={() => window.open(`http://localhost:8080${message.fileUrl}`, '_blank')}
+                  onClick={() => window.open(`https://backend-deployment-1-ke5h.onrender.com${message.fileUrl}`, '_blank')}
                   onError={(e) => {
                     console.error('Image load error:', message.fileUrl);
                     e.target.style.display = 'none';
@@ -503,7 +503,7 @@ const ChatWindow = ({ selectedUser, onBack }) => {
             ) : (
               <Box 
                 sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }}
-                onClick={() => window.open(`http://localhost:8080${message.fileUrl}`, '_blank')}
+                onClick={() => window.open(`https://backend-deployment-1-ke5h.onrender.com${message.fileUrl}`, '_blank')}
               >
                 <Description />
                 <Box>
@@ -546,7 +546,7 @@ const ChatWindow = ({ selectedUser, onBack }) => {
       }}>
         <Box sx={{ textAlign: 'center' }}>
           <Typography variant="h4" color="text.secondary" gutterBottom fontWeight="medium">
-            Welcome to ChatWave
+            Welcome to ConnectX
           </Typography>
           <Typography variant="body1" color="text.secondary">
             Select a chat to start messaging

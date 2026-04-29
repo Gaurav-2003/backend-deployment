@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchCurrentUser = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/users/me');
+      const response = await axios.get('https://backend-deployment-1-ke5h.onrender.com/api/users/me');
       setUser(response.data);
     } catch (error) {
       console.error('Failed to fetch user', error);
