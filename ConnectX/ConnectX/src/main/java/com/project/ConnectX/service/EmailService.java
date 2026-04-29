@@ -17,9 +17,9 @@ public class EmailService {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo(to);
-            message.setSubject("ChatWave - OTP Verification");
+            message.setSubject("ConnectX - OTP Verification");
             message.setText(buildOtpEmailContent(otp, type));
-            message.setFrom("noreply@chatwave.com");
+            message.setFrom("noreply@connectx.com");
 
             mailSender.send(message);
             log.info("OTP email sent successfully to: {}", to);

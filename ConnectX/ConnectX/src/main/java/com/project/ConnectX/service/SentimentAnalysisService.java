@@ -29,7 +29,7 @@ public class SentimentAnalysisService {
 //            props.setProperty("ssplit.eolonly", "true");
             props.setProperty("annotators", "tokenize,ssplit,pos");
             props.setProperty("ssplit.eolonly", "true");
-            pipeline = new StanfordCoreNLP(props);
+            //pipeline = new StanfordCoreNLP(props);
             log.info("Stanford CoreNLP initialized successfully");
         } catch (Exception e) {
             log.warn("Stanford CoreNLP initialization failed, using keyword-based analysis only", e);
