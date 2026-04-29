@@ -34,19 +34,19 @@ api.interceptors.response.use(
 );
 
 export const authAPI = {
-  register: (data) => api.post('/auth/register', data),
-  verifyOtp: (data) => api.post('/auth/verify-otp', data),
-  login: (data) => api.post('/auth/login', data),
-  resendOtp: (data) => api.post('/auth/resend-otp', data)
+  register: (data) => api.post('/api/auth/register', data),
+  verifyOtp: (data) => api.post('/api/auth/verify-otp', data),
+  login: (data) => api.post('/api/auth/login', data),
+  resendOtp: (data) => api.post('/api/auth/resend-otp', data)
 };
 
 export const userAPI = {
-  getCurrentUser: () => api.get('/users/me'),
-  updateProfile: (formData) => api.put('/users/profile', formData, {
+  getCurrentUser: () => api.get('/api/users/me'),
+  updateProfile: (formData) => api.put('/api/users/profile', formData, {
     headers: { 'Content-Type': 'multipart/form-data' }
   }),
-  searchUsers: (query) => api.get(`/users/search?query=${query}`),
-  getUserChats: () => api.get('/users/chats')
+  searchUsers: (query) => api.get(`/api/users/search?query=${query}`),
+  getUserChats: () => api.get('/api/users/chats')
 };
 
 export const messageAPI = {
