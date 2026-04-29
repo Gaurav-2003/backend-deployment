@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-const API_BASE_URL =
-  process.env.REACT_APP_API_URL || "http://localhost:8080";
 import {
   Box,
   Paper,
@@ -34,7 +32,8 @@ import { useWebSocket } from '../context/WebSocketContext';
 import { useAuth } from '../context/AuthContext';
 import { messageAPI } from '../services/api';
 import VideoCallModal from './VideoCallModal';
-
+const API_BASE_URL =
+  process.env.REACT_APP_API_URL || "http://localhost:8080";
 const ChatWindow = ({ selectedUser, onBack }) => {
   const { user } = useAuth();
   const { send, subscribe, unsubscribe, connected } = useWebSocket();
