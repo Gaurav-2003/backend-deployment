@@ -484,7 +484,7 @@ const ChatWindow = ({ selectedUser, onBack }) => {
               <Box>
                 <Box
                   component="img"
-                  src={`https://backend-deployment-1-ke5h.onrender.com${message.fileUrl}`}
+                  src={`${API_BASE_URL}${message.fileUrl}`}
                   alt={message.fileName}
                   sx={{
                     maxWidth: '100%',
@@ -493,7 +493,7 @@ const ChatWindow = ({ selectedUser, onBack }) => {
                     cursor: 'pointer',
                     display: 'block'
                   }}
-                  onClick={() => window.open(`https://backend-deployment-1-ke5h.onrender.com${message.fileUrl}`, '_blank')}
+                  onClick={() => window.open(`${API_BASE_URL}${message.fileUrl}`, '_blank')}
                   onError={(e) => {
                     console.error('Image load error:', message.fileUrl);
                     e.target.style.display = 'none';
@@ -503,7 +503,7 @@ const ChatWindow = ({ selectedUser, onBack }) => {
             ) : (
               <Box 
                 sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }}
-                onClick={() => window.open(`https://backend-deployment-1-ke5h.onrender.com${message.fileUrl}`, '_blank')}
+                onClick={() => window.open(`${API_BASE_URL}${message.fileUrl}`, '_blank')}
               >
                 <Description />
                 <Box>

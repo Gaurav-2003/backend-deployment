@@ -33,7 +33,7 @@ export const WebSocketProvider = ({ children }) => {
 
   const connect = () => {
     const client = new Client({
-      webSocketFactory: () => new SockJS('https://backend-deployment-1-ke5h.onrender.com/ws'),
+      webSocketFactory: () => new SockJS('${API_BASE_URL}/ws'),
       connectHeaders: {
         Authorization: `Bearer ${token}`
       },
